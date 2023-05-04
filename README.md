@@ -28,9 +28,9 @@ Na função `loop()`, o programa realiza a leitura do nível da umidade, atravé
 
 O sistema é capaz de alertar o usuário de três maneiras diferentes, dependendo do estado das leituras dos sensores:
 
-Se a temperatura estiver abaixo de 10 graus Celsius, o LED amarelo acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Temp. BAIXA!" é exibida no display LCD.
-Se a temperatura estiver entre 10 e 15 graus Celsius, o LED verde acende e a mensagem "Temperatura OK!" é exibida no display LCD.
-Se a temperatura estiver acima de 15 graus Celsius, o LED amarelo acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Temp. ALTA!" é exibida no display LCD.
-Se estiver em nível de alerta, o LED amarelo acende e o buzzer emite um som de alerta por três vezes com meio segundo de pausa entre cada som, enquanto a mensagem "Ambiente a meia luz." é exibida no display LCD. Se a luminosidade for superior ao nível estipulado, o LED vermelho acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Ambiente muito claro." é exibida no display.
++ Se a temperatura estiver abaixo de 10 graus Celsius, o LED amarelo acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Temp. BAIXA!" é exibida no display LCD.
++ Se a temperatura estiver entre 10 e 15 graus Celsius, o LED verde acende e a mensagem "Temperatura OK!" é exibida no display LCD.
++ Se a temperatura estiver acima de 15 graus Celsius, o LED amarelo acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Temp. ALTA!" é exibida no display LCD.
++ Se estiver em nível de alerta, o LED amarelo acende e o buzzer emite um som de alerta por três vezes com meio segundo de pausa entre cada som, enquanto a mensagem "Ambiente a meia luz." é exibida no display LCD. Se a luminosidade for superior ao nível estipulado, o LED vermelho acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Ambiente muito claro." é exibida no display.
 
 Em resumo, este projeto é uma aplicação prática de programação e eletrônica que permite a criação de um sistema de monitoramento ambiental simples, mas eficaz, para monitorar a temperatura e a luminosidade em um ambiente.
