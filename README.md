@@ -2,28 +2,35 @@
 
 
 ## Sobre
-> Este projeto usa uma placa Arduino para monitorar e exibir os níveis de temperatura, luminosidade e umidade em um ambiente. O programa usa um LDR (resistor dependente de luz) para medir o nível de luz e um termistor para medir a temperatura. Os resultados são exibidos em uma tela LCD 16x2. Além disso, o programa usa três LEDs e um buzzer para fornecer feedback visual e auditivo quando o níveis de luz, temperatura ou umidade estiverem muito altos ou baixos.
+Este projeto usa uma placa Arduino para monitorar e exibir os níveis de temperatura, luminosidade e umidade em um ambiente. O programa usa um LDR (resistor dependente de luz) para medir o nível de luz e um termistor para medir a temperatura. Os resultados são exibidos em uma tela LCD 16x2. Além disso, o programa usa três LEDs e um buzzer para fornecer feedback visual e auditivo quando o níveis de luz, temperatura ou umidade estiverem muito altos ou baixos.
 
 
 ## ⚙️ Requisitos:
- > + Para executar este projeto, você precisará dos seguintes componentes:
- > + Placa Arduino
- > + Protoboard
- > + Display LCD 16x2
- > + Jumpers
- > + Resistores
- > + LEDs verde, amarelo e vermelho
- > + Buzzer
- > + Potenciômetros
- > + Sensor LDR
- > + Sensor de Temperatura TMP36
+ + Para executar este projeto, você precisará dos seguintes componentes:
+ + Placa Arduino
+ + Protoboard
+ + Display LCD 16x2
+ + Jumpers
+ + Resistores
+ + LEDs verde, amarelo e vermelho
+ + Buzzer
+ + Potenciômetros
+ + Sensor LDR
+ + Sensor de Temperatura TMP36
 
 
 ## ⌨️ Implementação:
-> O programa começa com a declaração de algumas variáveis e constantes. As constantes "BUZZER_PIN", "GREEN_LED_PIN", "YELLOW_LED_PIN" e "RED_LED_PIN" definem os pinos que estão conectados ao buzzer e aos LEDs. As constantes "LDR_PIN", "RS_PIN", "EN_PIN", "D4_PIN", "D5_PIN", "D6_PIN" e "D7_PIN" definem os pinos conectados à tela LCD e ao sensor LDR. As constantes "OK_LIGHT" e "ALERT_LIGHT" definem os níveis de luz nos quais os LEDs e o buzzer fornecerão feedback.
+O código foi escrito na linguagem C++ e utiliza a biblioteca LiquidCrystal.h para controlar o display LCD.
 
-> Na função `setup()`, o programa define os pinos como entradas ou saídas e inicializa a tela LCD. A função "createChar" é usada para definir o caractere personalizado a ser exibido na tela LCD.
+Na função `setup()` do código, é realizada a configuração das portas do Arduino como saídas ou entradas. O display LCD é inicializado com as portas que foram definidas para os pinos RS, EN, D4, D5, D6 e D7, e é criado um novo caractere personalizado para exibir o símbolo de grau Celsius.
 
-> Na função `loop()`, o programa lê a temperatura e a exibe na tela LCD, assim como a umidade. Ele também verifica se os níveis estão muito altos ou muito baixos e fornece feedback de acordo. Em seguida, o programa faz a leitura do nível de luminosidade e verifica se está dentro da faixa aceitável. Se o nível de luz estiver dentro da faixa aceitável, o LED verde acende e a campainha é desligada. Se o nível de luz estiver na faixa de alerta, o LED amarelo é ligado e a campainha é ligada por três ciclos de um segundo cada. Se o nível de luz estiver muito alto, o LED vermelho é ligado e os LEDs verde e amarelo são desligados.
+Na função `loop()`, o programa realiza a leitura do nível da umidade, através do potenciômetro, e mede os níveis de temperatura e luminosidade pelo seus sensores, e exibe as leituras no display LCD. Em seguida, o programa verifica se os valores estão dentro dos limites estipulados e aciona os LEDs e o buzzer conforme a necessidade.
 
-> No geral, o programa é um exemplo simples de como uma placa Arduino pode ser usada para monitorar e controlar o ambiente de uma sala. Ele pode ser modificado e expandido para incluir outros sensores e atuadores e fornecer feedback mais sofisticado ao usuário.
+O sistema é capaz de alertar o usuário de três maneiras diferentes, dependendo do estado das leituras dos sensores:
+
+Se a temperatura estiver abaixo de 10 graus Celsius, o LED amarelo acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Temp. BAIXA!" é exibida no display LCD.
+Se a temperatura estiver entre 10 e 15 graus Celsius, o LED verde acende e a mensagem "Temperatura OK!" é exibida no display LCD.
+Se a temperatura estiver acima de 15 graus Celsius, o LED amarelo acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Temp. ALTA!" é exibida no display LCD.
+Se estiver em nível de alerta, o LED amarelo acende e o buzzer emite um som de alerta por três vezes com meio segundo de pausa entre cada som, enquanto a mensagem "Ambiente a meia luz." é exibida no display LCD. Se a luminosidade for superior ao nível estipulado, o LED vermelho acende e o buzzer emite um som contínuo por cinco segundos, enquanto a mensagem "Ambiente muito claro." é exibida no display.
+
+Em resumo, este projeto é uma aplicação prática de programação e eletrônica que permite a criação de um sistema de monitoramento ambiental simples, mas eficaz, para monitorar a temperatura e a luminosidade em um ambiente.
