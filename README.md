@@ -2,7 +2,7 @@
 
 
 ## Sobre
-Este projeto usa uma placa Arduino para monitorar e exibir os níveis de temperatura, luminosidade e umidade em um ambiente. O programa usa um LDR (resistor dependente de luz) para medir o nível de luz e um termistor para medir a temperatura. Os resultados são exibidos em uma tela LCD 16x2. Além disso, o programa usa três LEDs e um buzzer para fornecer feedback visual e auditivo quando o níveis de luz, temperatura ou umidade estiverem muito altos ou baixos.
+Este projeto usa uma placa Arduino para monitorar e exibir os níveis de temperatura, luminosidade e umidade em um ambiente. O programa usa um LDR (light-dependent resistor) para medir o nível de luz e um termistor para medir a temperatura. Os resultados são exibidos em uma tela LCD 16x2. Além disso, o programa usa três LEDs e um buzzer para fornecer feedback visual e auditivo quando o níveis de luz, temperatura ou umidade estiverem muito altos ou baixos.
 
 
 ## ⚙️ Requisitos:
